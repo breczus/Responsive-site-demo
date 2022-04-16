@@ -1,0 +1,322 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+html,
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+	overflow-x: hidden;
+}
+
+body {
+	font-family: 'Oswald', sans-serif;
+	font-size: 1.3rem;
+}
+img {
+	max-width: 100%;
+}
+
+.nav {
+	visibility: hidden;
+	height: 0;
+	width: 100%;
+	position: absolute;
+}
+
+.nav__list {
+	list-style: none;
+	text-transform: uppercase;
+	padding: 0;
+	margin: 0;
+	font-weight: 600;
+	line-height: 1.25em;
+}
+
+.nav__list--primary {
+	margin-bottom: 2em;
+}
+
+.nav__link {
+	text-decoration: none;
+	color: white;
+}
+.nav__item:hover {
+	opacity: 0.5;
+}
+
+.nav__item {
+	margin-top: 0.75em;
+	cursor: pointer;
+}
+
+.nav--visible {
+	visibility: visible;
+	height: auto;
+	position: relative;
+}
+
+.nav__link--button {
+	background-color: #a59678;
+	color: white;
+	padding: 5px 15px;
+	border-radius: 100px;
+	text-transform: uppercase;
+}
+
+.logo {
+	height: 30px;
+}
+
+header {
+	background: #2e323f;
+	padding: 1em;
+	text-align: center;
+}
+.nav-toggle {
+	cursor: pointer;
+	border: 0;
+	width: 3em;
+	height: 3em;
+	padding: 0em;
+	border-radius: 50%;
+	background: #3b4050;
+	color: white;
+	transition: opacity 250ms ease;
+	position: absolute;
+	left: 0;
+}
+.nav__link:hover {
+	opacity: 0.5;
+}
+.nav-toggle:focus,
+.nav-toggle:hover {
+	opacity: 0.75;
+}
+
+.hamburger {
+	width: 50%;
+	position: relative;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+	display: block;
+	margin: 0 auto;
+	height: 3px;
+	background: white;
+}
+
+.hamburger::before,
+.hamburger::after {
+	content: '';
+	width: 100%;
+}
+
+.hamburger::before {
+	transform: translateY(-6px);
+}
+
+.hamburger::after {
+	transform: translateY(3px);
+}
+
+.container {
+	width: 80%;
+	margin: 0 auto;
+	max-width: 1200px;
+	/* added for nav-toggle positioning */
+	position: relative;
+}
+
+.hero {
+	background-color: #3b4050;
+	max-width: 100%;
+	padding: 2em 0;
+	text-align: center;
+	font-size: 24px;
+}
+
+.hero__tittle {
+	font-size: 90px;
+	color: #a59678;
+
+	line-height: 1em;
+}
+
+.hero__tittle span {
+	color: white;
+}
+
+.hero__text {
+	font-family: 'Montserrat';
+	font-size: 24px;
+	color: whitesmoke;
+	margin: 2em 0;
+}
+
+.section2 {
+	background-color: whitesmoke;
+	padding: 2em;
+	font-family: 'Oswald';
+	font-size: 24px;
+	color: #6f737f;
+	text-align: center;
+}
+
+.section__tittle {
+	color: #a59678;
+	font-family: 'Oswald';
+	font-size: 30px;
+}
+.section__tittle--white {
+	color: white;
+	padding-top: 1em;
+}
+
+.section__text {
+	margin: 1.5em 0;
+	font-family: 'Monserrat';
+	font-size: 18px;
+	color: #6f737f;
+}
+
+.aside {
+	background-color: #3b4050;
+	text-align: center;
+	color: white;
+	margin-bottom: 1em;
+	padding-bottom: 1em;
+}
+
+.footer {
+	background-color: #3b4050;
+	padding: 1em;
+	font-family: Monserrat;
+	font-size: 16px;
+}
+.footer__tittle {
+	font-family: 'Oswald', sans-serif;
+	font-size: 4em;
+	color: white;
+	text-align: center;
+	padding: 0.5em;
+}
+
+.section__tittle--footer {
+	font-family: 'Oswald', sans-serif;
+	font-size: 21px;
+	margin: 0.5em 0;
+}
+.footer__link {
+	font-family: Monserrat;
+	font-size: 16px;
+	color: #6f737f;
+	margin: 1.5em 0;
+}
+@media (min-width: 700px) {
+	.nav-toggle {
+		display: none;
+	}
+	.nav {
+		visibility: visible;
+		height: auto;
+		position: relative;
+		display: flex;
+		justify-content: flex-end;
+		gap: 1.25em;
+	}
+	.nav__list--primary {
+		margin-bottom: 0;
+	}
+	.nav__item {
+		margin: 0 0 0 1em;
+	}
+	.row {
+		display: flex;
+	}
+
+	ul {
+		display: flex;
+	}
+	.hero__tittle {
+		text-align: left;
+		margin-right: 0.25em;
+	}
+	.hero__side {
+		text-align: left;
+		min-width: 200px;
+	}
+
+	.section3 {
+		margin-top: 4em;
+	}
+	.sec3 {
+		align-items: flex-start;
+		justify-content: space-between;
+		flex-direction: column;
+	}
+	.column {
+		flex-direction: column;
+
+		margin: auto;
+	}
+	.section__aside {
+		margin: auto;
+		display: flex;
+		justify-content: space-between;
+	}
+	.aside {
+		width: 30%;
+		padding-bottom: 0;
+	}
+}
+
+@media (min-width: 1000px) {
+	.rowXL {
+		display: flex;
+	}
+
+	.row {
+		align-items: flex-end;
+	}
+	aside {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+	}
+	.nav__list--footer {
+		flex-direction: column;
+	}
+	.footer__link {
+		margin: 0;
+		padding-top: 1em;
+	}
+	.col {
+		max-width: 35%;
+		margin: 1em;
+	}
+	.sec3 {
+		display: flex;
+		flex-direction: row;
+	}
+
+	.section__aside {
+		flex-direction: column;
+		width: 25%;
+	}
+
+	.aside {
+		width: 100%;
+	}
+
+	.column {
+		width: 60%;
+	}
+}
